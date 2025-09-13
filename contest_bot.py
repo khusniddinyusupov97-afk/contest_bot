@@ -2,9 +2,10 @@ import telebot
 from telebot import types
 import json
 import time
+import os  # <-- added this
 
 # ------------------ CONFIG ------------------
-TOKEN = "8294153913:AAEYtOilD_mAVKq9wmjMjOOu8ADwSL5y3H4"
+TOKEN = os.getenv("TOKEN")   # <-- now it reads from environment variables
 bot = telebot.TeleBot(TOKEN)
 
 # Admin IDs
